@@ -7,6 +7,9 @@ license  'perl';
 
 build_requires 'Test::More';
 
+requires 'Atompub::Client';
+requires 'XML::Atom::Entry';
+
 auto_install;
 
 WriteAll;

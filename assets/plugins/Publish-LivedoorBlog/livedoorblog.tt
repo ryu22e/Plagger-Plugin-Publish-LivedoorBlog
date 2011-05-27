@@ -1,0 +1,6 @@
+<ul>
+[% FOREACH entry = feed.entries -%]
+<li>[% entry.body %]<a target="_blank" href="[% entry.link %]">link</a></li>
+[% END %]
+</ul>
+
