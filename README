@@ -28,21 +28,6 @@ perldoc command.
 
     perldoc Plagger::Plugin::Publish::LivedoorBlog
 
-You can also look for information at:
-
-    RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Plagger-Plugin-Publish-LivedoorBlog
-
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Plagger-Plugin-Publish-LivedoorBlog
-
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Plagger-Plugin-Publish-LivedoorBlog
-
-    Search CPAN
-        http://search.cpan.org/dist/Plagger-Plugin-Publish-LivedoorBlog/
-
-
 LICENSE AND COPYRIGHT
 
 Copyright (C) 2011 ryu22e
