@@ -44,9 +44,13 @@ sub post_to_blog {
     $entry->title( $self->conf->{title} || $args{title} || '' );
     $entry->content( $args{body} );
 
-    my $category = XML::Atom::Category->new;
-    $category->term( $self->conf->{category} );
-    $entry->category($category);
+    my @categories = ();
+    for my $c ( @{ $self->conf->{category} } ) {
+        my $category = XML::Atom::Category->new;
+        $category->term($c);
+        push( @categories, $category );
+    }
+    $entry->category(@categories);
 
     my $client = Atompub::Client->new;
     $client->username( $self->conf->{username} );
@@ -63,11 +67,11 @@ Plagger::Plugin::Publish::LivedoorBlog - The great new Plagger::Plugin::Publish:
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -77,7 +81,9 @@ our $VERSION = '0.02';
       username: Melody
       password: Nelson
       title: "Today's post from Plagger"
-      category: "Example"
+      category: 
+        - "Example1"
+        - "Example2"
 
 =head1 SUBROUTINES/METHODS
 
